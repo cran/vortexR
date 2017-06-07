@@ -6,7 +6,7 @@ Description: Facilitate Post Vortex Simulation Analysis by offering
     analyse the collated output statistically. Vortex is a software for
     the development of individual-based model for population dynamic simulation
     (see <http://www.vortex10.org/Vortex10.aspx>).
-Version: 1.0.3
+Version: 1.1.4
 Authors@R: c(
     person("Carlo", "Pacioni", email="C.Pacioni@Murdoch.edu.au", role=c("aut", "cre")),
     person(c("Florian", "W."), "Mayer", email="Florian.Mayer@dpaw.wa.gov.au", role="aut"))
@@ -23,6 +23,6 @@ Suggests: devtools, gridExtra, knitr, rmarkdown, roxygen2, testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2017-03-28 08:00:26 UTC; carlo
+Packaged: 2017-06-07 05:44:54 UTC; cp0d
 Repository: CRAN
-Date/Publication: 2017-03-28 09:23:13 UTC
+Date/Publication: 2017-06-07 05:56:56 UTC

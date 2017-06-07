@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -69,7 +69,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">vortexR: user guide</h1>
 <h4 class="author"><em>Carlo Pacioni and Florian Mayer</em></h4>
-<h4 class="date"><em>28 March, 2017</em></h4>
+<h4 class="date"><em>07 June, 2017</em></h4>
 
 
 
@@ -383,7 +383,7 @@ scatter.plot</code></pre></div>
 <pre><code>## Done! Elapsed time:</code></pre>
 <p><img src="data:image/png;base64,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" style="display: block; margin: auto;" /></p>
 <pre><code>##    user  system elapsed 
-##    0.79    0.01    0.68</code></pre>
+##    0.45    0.00    0.34</code></pre>
 <p>Once the search is concluded, there are several pieces of information that can be retrieved. Detailed explanations and examples are in the documentations of the R package <code>glmulti</code> and we only report below a few examples.</p>
 <p>It is possible to inspect the plot of the information criterion of the evaluated models. This is saved to disk if <code>save2disk=TRUE</code>, otherwise it can be called from the <code>glmulti</code> object:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(reg, <span class="dt">type=</span><span class="st">&quot;p&quot;</span>)</code></pre></div>
@@ -392,28 +392,28 @@ scatter.plot</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">reg@formulas[<span class="dv">1</span>]</code></pre></div>
 <pre><code>## [[1]]
 ## N ~ 1 + SV1 + SV2 + SV3 + SV2:SV1 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;</code></pre>
+## &lt;environment: 0x000000000a91fa80&gt;</code></pre>
 <p>Possible additional information you may be interested into are, for example, the list of the best 5 models retained:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">reg@formulas[<span class="dv">1</span>:<span class="dv">5</span>]</code></pre></div>
 <pre><code>## [[1]]
 ## N ~ 1 + SV1 + SV2 + SV3 + SV2:SV1 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;
+## &lt;environment: 0x000000000a91fa80&gt;
 ## 
 ## [[2]]
 ## N ~ 1 + SV1 + SV2 + SV2:SV1 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;
+## &lt;environment: 0x000000000a91fa80&gt;
 ## 
 ## [[3]]
 ## N ~ 1 + SV1 + SV3 + SV2:SV1 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;
+## &lt;environment: 0x000000000a91fa80&gt;
 ## 
 ## [[4]]
 ## N ~ 1 + SV1 + SV3 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;
+## &lt;environment: 0x000000000a91fa80&gt;
 ## 
 ## [[5]]
 ## N ~ 1 + SV1 + SV2:SV1 + SV3:SV1 + SV3:SV2
-## &lt;environment: 0x0000000016b8e2f0&gt;</code></pre>
+## &lt;environment: 0x000000000a91fa80&gt;</code></pre>
 <p>The information criterion values:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">reg@crits</code></pre></div>
 <pre><code>##  [1] 179.1871 195.0635 196.1317 198.8619 199.0479 200.6671 202.1502
@@ -684,32 +684,6 @@ NeAll &lt;-<span class="st"> </span><span class="kw">Ne</span>(<span class="dt">
 <pre><code>## Effective population size based on loss of gene diversity from year 53 to year 120</code></pre>
 <pre><code>## NOTE: The first year used in the calculations is adjusted  using the generation time provided (yr0 + gen).  See documentation for more information.</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">NeAll</code></pre></div>
-<pre><code>##     Population 1         Scenario
-##  1:     855.9007    ST_Classic(1)
-##  2:    1589.8342    ST_Classic(2)
-##  3:    3635.6408    ST_Classic(3)
-##  4:    2781.8560    ST_Classic(4)
-##  5:    3036.9304    ST_Classic(5)
-##  6:    3616.9564    ST_Classic(6)
-##  7:    1993.0971    ST_Classic(7)
-##  8:    3853.7548    ST_Classic(8)
-##  9:    3852.5911    ST_Classic(9)
-## 10:    4674.3259   ST_Classic(10)
-## 11:    3733.2917   ST_Classic(11)
-## 12:       0.5000   ST_Classic(12)
-## 13:    3539.7038   ST_Classic(13)
-## 14:    3447.4277   ST_Classic(14)
-## 15:    3854.1427   ST_Classic(15)
-## 16:    4367.9960   ST_Classic(16)
-## 17:    4226.8881   ST_Classic(17)
-## 18:    3195.0337   ST_Classic(18)
-## 19:    4093.7750   ST_Classic(19)
-## 20:    3638.5717   ST_Classic(20)
-## 21:    4092.9507   ST_Classic(21)
-## 22:    3969.1291   ST_Classic(22)
-## 23:    3945.1491   ST_Classic(23)
-## 24:    3970.3281 ST_Classic(Base)
-##     Population 1         Scenario</code></pre>
 <p>Note the odd value for scenario 12, consequent to the population going extinct.</p>
 <p>Once we are here, we will calculate the Ne:N ratios using the results from <code>Nadults</code> above.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load required package</span>
