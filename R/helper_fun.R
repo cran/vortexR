@@ -20,8 +20,8 @@
 #'
 #' @examples
 #' my.df <- data.frame(1, 1:10, sample(LETTERS[1:3], 10, replace = TRUE))
-#' my.folder <- paste0(getwd(), '/test')
-#' df2disk(df=my.df, dirpath=getwd(), fname='testname')
+#' my.folder <- file.path(tempdir(check=TRUE), 'test')
+#' df2disk(df=my.df, dirpath=tempdir(check=TRUE), fname='testname')
 #' df2disk(df=my.df, dirpath=my.folder, fname='testname', postfix='_testpostfix')
 #' @export
 df2disk <- function(df, dirpath, fname, postfix = "", row_names=FALSE) {
@@ -122,6 +122,6 @@ CompileIter <- function(iter, filename, n_rows, iter_ln, lines, header) {
         regexpr(pattern = "\\$Scenario: ", lines[1]), "match.length") + 1
     ScenName <- substr(lines[1], ScenNameStarts, nchar(lines[1]))
     Scenario <- rep(ScenName, length = length(temp.df$Year))
-    temp.df <- cbind(Scenario, Iteration, temp.df)
+    temp.df <- cbind(Scenario, Iteration, temp.df,  stringsAsFactors = TRUE)
     return(temp.df)
 }

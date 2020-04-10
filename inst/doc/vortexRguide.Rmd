@@ -18,7 +18,7 @@ vortexR is an R package that automates common tasks carried out on outputs of po
 vortexR requires R v3.1.3 (or later versions) and, while it may work on previous R versions, this has not been tested and the user is strongly recommended to use v3.1.3 or greater. If you are using Windows and need to check or update your version of R (and installed packages), you can easily do that following the instructions in this [webpage](http://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/). Similarly, vortexR was developed to be compatible with Vortex v10 (Lacy & Pollak 2013). Formatting of the outputs is slightly different in Vortex v10 compared to previous versions, which may cause issues. Some functions may adequately process outputs from previous versions, but it is the responsibility of the user to make sure the correctness of the results. 
 
 If you are at your first experiences with R, and have not installed it yet, 
-download the latest version from [r-project.org](www.r-project.org) for your 
+download the latest version from [r-project.org](https://www.r-project.org) for your 
 operating system. 
 While there is no strict requirement to do so, we find the free RStudio IDE 
 ([rstudio.com](https://www.rstudio.com/)) very handy. 
@@ -103,7 +103,7 @@ If you customise a vortexR script to suit your specific needs, we would apprecia
 if you can still cite vortexR's main reference stating something like: 
 "we used a customised version of the script vortexR-*script-name* (Pacioni and Mayer, 2017)".
 
-**_Pacioni C, and Mayer F. 2017. VortexR: an R package for post Vortex simulation analysis. Methods in Ecology and Evolution._**  
+**_Pacioni C, and Mayer F. 2017. VortexR: an R package for post Vortex simulation analysis. Methods in Ecology and Evolution. 8, 1477-1481_**  
 
 Please note that no commercial use of any part of vortexR is allowed.
 
@@ -249,7 +249,7 @@ pairw[[11]]
 
 Interestingly, the effects of these parameters, in terms of changes in the demography and heterozygosity of the population, are inconsistent. For example, note how the Adult Mortality (SV2) has a substantial effect on the final heterozygosity of the population, but not on the demography. This inconsistency is also confirmed by the non-significant Kendall's test (again, to keep it short, we only print out an extract for the test using SSMD).
 ```{r}
-pairw[[12]][[2]][c(1:2, 21:22, 24:25)]
+pairw[[12]][[2]]
 ```
 
 
@@ -534,7 +534,7 @@ Note that R will generate a warning if ```param``` is a count but there are valu
 
 The argument ```set_size``` is used to set the number of models that the search should return. The default is ```NA``` and if no alternative value is passed, vortexR will use whichever is the smaller between the number of possible candidate models and ```ncand```.  
 
-If ```param``` is a variable that takes proportions (e.g. Gene Diversity or Inbreeding), then the function uses a Beta regression from the R package [betareg](https://CRAN.R-project.org/package=betareg) (Cribari-Neto & Zeileis 2010). Initially vortexR tests different link functions and selects the one with the lowest AIC value. The selected link function is displayed in the R console and the difference in the AIC scores relative to the best link function is also displayed. Then glmulti carries out the search for the best models as described above. ```fit_regression``` explicitly ignores ```NA``` (for example when the population goes extinct and the user requested Gene Diversity as dependent variable). Depending on the data, fitting several Beta regression models to complete the search may be a long (and memory hungry) process. Also, the user should keep in mind that the package betareg has the limitation that currently cannot handle analysis of data when the dependent variable takes value of either exactly 0 or 1.  
+If ```param``` is a variable that takes proportions (e.g. Gene Diversity or Inbreeding), then the function uses a Beta regression from the R package [betareg](https://CRAN.R-project.org/package=betareg) (Cribari-Neto & Zeileis 2010). Initially vortexR tests different link functions (passed with the argument ``` links```, whose default is ```links = c("logit", "probit", "cloglog", "cauchit", "loglog"```) and selects the one with the lowest AIC value. The selected link function is displayed in the R console and the difference in the AIC scores relative to the best link function is also displayed. Then glmulti carries out the search for the best models as described above. ```fit_regression``` explicitly ignores ```NA``` (for example when the population goes extinct and the user requested Gene Diversity as dependent variable). Depending on the data, fitting several Beta regression models to complete the search may be a long (and memory hungry) process. Also, the user should keep in mind that the package betareg has the limitation that currently cannot handle analysis of data when the dependent variable takes value of either exactly 0 or 1.  
 
 When using data output in the .run files, because the .run files do not store values from additional variables (e.g. SVs or user-made PS), the user has also to provide a "look-up table". A look-up table is a table where the scenario names are listed together with the (missing) variables needed to fit the regression models. vortexR will match the scenarios contained in the input data with the relevant information contained in the look-up table using the scenario names. A look-up table can be generated with the ```lookup_table``` function and be passed with the argument ```lookup``` (but remember that parameters used to set up ST runs in Vortex are called SVs in the data file, .stdat). Alternatively, this information can be manually added by the users to the input data. In this case, ```lookup``` can be left on its default value ```NA```.  
 
@@ -648,9 +648,9 @@ Kalinowski, S.T., and Waples, R.S. (2002) Relationship of Effective to Census Si
 
 Lacy, R. C., and J. P. Pollak. 2013. VORTEX: a stochastic simulation of the extinction process. Version 10. Chicago Zoological Society, Brookfield.  
 
-M Dowle, T Short, S Lianoglou, and A. S. w. c. f. R. S. a. E. Antonyan. 2014. data.table: Extension of data.frame. R package version 1.9.2. https://CRAN.R-project.org/package=data.table.  
+M Dowle, and Arun Srinivasan. 2019. data.table: Extension of data.frame. R package version 1.12.8. https://CRAN.R-project.org/package=data.table.  
 
-Pacioni, C., Williams, M., Lacy, R.C., Spencer, P.B.S., and Wayne, A.F. (in review) Predators and genetic fitness: key threatening factors for the conservation of bettong species. Pacific Conservation Biology. 
+Pacioni, C., Williams, M., Lacy, R.C., Spencer, P.B.S., and Wayne, A.F. (2017) Predators and genetic fitness: key threatening factors for the conservation of bettong species. Pacific Conservation Biology 23, 200-212. 
 
 Palstra, F.P., and Fraser, D.J. (2012) Effective/census population size ratio estimation: a compendium and appraisal. Ecology and evolution 2(9), 2357-2365.  
 
